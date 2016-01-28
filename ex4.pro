@@ -15,10 +15,14 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     shape.cpp \
-    circle.cpp
+    circle.cpp \
+    rectangle.cpp \
+    triangle.cpp
 
 HEADERS  += mainwindow.h \
     shape.h \
-    circle.h
+    circle.h \
+    rectangle.h \
+    triangle.h
 
 FORMS    += mainwindow.ui

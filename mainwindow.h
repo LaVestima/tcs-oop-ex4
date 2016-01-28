@@ -9,6 +9,8 @@
 
 #include <shape.h>
 #include <circle.h>
+#include <rectangle.h>
+#include <triangle.h>
 
 namespace Ui {
 class MainWindow;
@@ -22,8 +24,8 @@ private:
     QPixmap *pixmap;
     QList<Shape> shapeList;
     QList<Circle> circleList;
-    //QList<Rectangle> rectangleList;
-    //QList<Triangle> triangleList;
+    QList<Rectangle> rectangleList;
+    QList<Triangle> triangleList;
 
 public:
     explicit MainWindow(QWidget *parent = 0);
@@ -32,6 +34,11 @@ public:
 
 private slots:
     void on_drawPushButton_clicked();
+    void on_circleComboBox_currentIndexChanged(int index);
+    void on_rectangleComboBox_currentIndexChanged(int index);
+    void on_triangleComboBox_currentIndexChanged(int index);
+    void on_deleteSelectedPushButton_clicked();
+    void on_deleteAllPushButton_clicked();
 };
 
 #endif // MAINWINDOW_H

@@ -8,7 +8,8 @@
 
 class Circle : public Shape {
 private:
-    unsigned int radius;
+    int radius;
+    QPainter *painter;
 public:
     Circle() : Shape(Qt::black) {radius = 100;}
     Circle(QPoint);
