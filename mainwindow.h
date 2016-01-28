@@ -39,6 +39,7 @@ private slots:
     void on_triangleComboBox_currentIndexChanged(int index);
     void on_deleteSelectedPushButton_clicked();
     void on_deleteAllPushButton_clicked();
+    void on_radioButton_0_toggled(bool checked);
 };
 
 #endif // MAINWINDOW_H

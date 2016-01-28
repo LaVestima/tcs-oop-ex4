@@ -13,6 +13,7 @@ private:
 public:
     Circle() : Shape(Qt::black) {radius = 100;}
     Circle(QPoint);
+    Circle(QPoint, int);
     void setRadius(unsigned int);
     void draw(QPixmap *);
 };

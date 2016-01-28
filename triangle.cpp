@@ -1,9 +1,11 @@
 #include "triangle.h"
 
-Triangle::Triangle(QPoint p) {
+Triangle::Triangle(QPoint p, int shapeWidth, int shapeHeight) {
     p0 = p;
-    width = 100;
-    height = 50;
+//    width = 100;
+//    height = 50;
+    width = shapeWidth;
+    height = shapeHeight;
 
     painter = new QPainter;
 }

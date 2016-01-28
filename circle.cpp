@@ -1,8 +1,9 @@
 #include "circle.h"
 
-Circle::Circle(QPoint p) {
+Circle::Circle(QPoint p, int shapeRadius) {
     p0 = p;
-    radius = 100;
+//    radius = 100;
+    radius = shapeRadius;
 
     painter = new QPainter;
 }

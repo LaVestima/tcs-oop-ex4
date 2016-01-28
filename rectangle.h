@@ -13,6 +13,7 @@ private:
     QPainter *painter;
 public:
     Rectangle(QPoint);
+    Rectangle(QPoint, int, int);
     void draw(QPixmap *);
 };
 

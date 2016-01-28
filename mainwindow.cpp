@@ -22,19 +22,22 @@ bool MainWindow::eventFilter(QObject *object, QEvent *event) { // Double click e
                 QRadioButton* shapeButton = findChild<QRadioButton*>("radioButton_" + QString::number(i));
 
                 if (shapeButton->isChecked()) {
+                    int shapeWidth = ui->widthLineEdit->text().toDouble();
+                    int shapeHeight = ui->heightLineEdit->text().toDouble();
+
                     switch(i) {
                     case 0: // Circle
-                        circleList.push_back(Circle(mouseEvent->pos()));
+                        circleList.push_back(Circle(mouseEvent->pos(), shapeWidth));
                         ui->circleComboBox->addItem(QString::number(circleList.count()-1));
                         ui->circleComboBox->setCurrentIndex(-1);
                         break;
                     case 1: // Rectangle
-                        rectangleList.push_back(Rectangle(mouseEvent->pos()));
+                        rectangleList.push_back(Rectangle(mouseEvent->pos(), shapeWidth, shapeHeight));
                         ui->rectangleComboBox->addItem(QString::number(rectangleList.count()-1));
                         ui->rectangleComboBox->setCurrentIndex(-1);
                         break;
                     case 2: // Triangle
-                        triangleList.push_back(Triangle(mouseEvent->pos()));
+                        triangleList.push_back(Triangle(mouseEvent->pos(), shapeWidth, shapeHeight));
                         ui->triangleComboBox->addItem(QString::number(triangleList.count()-1));
                         ui->triangleComboBox->setCurrentIndex(-1);
                         break;
@@ -43,6 +46,7 @@ bool MainWindow::eventFilter(QObject *object, QEvent *event) { // Double click e
             }
         }
     }
+    //on_drawPushButton_clicked();
     return QMainWindow::eventFilter(object,event);
 }
 

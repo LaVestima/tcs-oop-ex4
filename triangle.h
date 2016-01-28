@@ -13,6 +13,7 @@ private:
     QPainter *painter;
 public:
     Triangle(QPoint);
+    Triangle(QPoint, int, int);
     void draw(QPixmap *);
 };
 
